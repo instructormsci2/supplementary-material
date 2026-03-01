@@ -1,0 +1,104 @@
+{
+  "study1": {
+    "title": "First-Order Steering (Study 1)",
+    "description": "Contrastive pairs used to construct first-order steering vectors. Each pair consists of a neutral baseline and a literary transformation that preserves the same scenario while altering the linguistic register and perceptual mode.",
+    "categories": [
+      {
+        "name": "Contemplative",
+        "source": "pairs_contemplative_matched.jsonl",
+        "pairs": [
+          {
+            "neutral": "She came home after a long day at work. She was tired and looking forward to relaxing for the evening. The house was quiet when she opened the door, which was nice after the noise of the office. She put her keys on the table by the door, the same place she always left them. She hung up her coat in the closet and took off her shoes. The living room was just as she had left it that morning. She sat down on the couch and leaned back against the cushions. The couch was comfortable and she felt her muscles relax. It felt good to be home after such a long day. She thought about what to make for dinner and decided she would figure it out after resting for a few minutes.",
+            "literary": "She came home. The door gave way under her hand as though it had been waiting. The hallway held its particular silence — not absence of sound but a kind of attention. Her keys found the table by memory. She sat, and the house settled around her like a second skin she had almost forgotten how to wear."
+          },
+          {
+            "neutral": "He found a box of old photographs in the closet while looking for something else. He sat down on the bed and started looking through them. The photos were from when he was a child, showing birthday parties, vacations, and regular days at home. Some of the colors had faded over time. He recognized the people in the pictures — his parents, his siblings, himself as a young boy. He spent a while going through them, remembering things he hadn't thought about in a long time. Some of the photos made him smile. When he was done, he put them back in the box and put the box back in the closet.",
+            "literary": "He found photographs he hadn't known he'd kept. In each one, a sun that had since burned out was still shining. A woman who was now old was still young. A child — himself, though the word felt approximate — held something in both hands. He couldn't tell what it was. The child's face said it mattered. The hands, which were his hands, which were not yet his hands, did not know it yet."
+          },
+          {
+            "neutral": "He found an old coat in the back of the closet that had belonged to his father. It was a heavy wool coat, dark gray, with wooden buttons. He hadn't seen it in years. He took it off the hanger and held it up. It was larger than he remembered, or maybe he had been smaller then. He tried it on. It fit differently than his own coats. The shoulders were wider and the sleeves a bit long. It smelled faintly of cedar from the closet. He looked at himself in the mirror for a moment. Then he took it off, put it back on the hanger, and closed the closet door.",
+            "literary": "The coat was hanging in the back of the closet like something waiting to be forgiven. He put it on. The wool was heavier than any coat he owned, and the buttons were wooden, worn smooth by hands that were not his. He stood in front of the mirror and for a moment he was standing inside his father's dimensions — the width of the shoulders, the hang of the fabric, the way the collar sat against the neck like a hand. Then he took it off and hung it back. The closet closed around it like a sentence that had decided not to finish."
+          }
+        ]
+      },
+      {
+        "name": "Lynchian",
+        "source": "pairs_lynchian_matched.jsonl",
+        "pairs": [
+          {
+            "neutral": "She checked into a hotel for a work conference that was being held over two days in another city. The front desk clerk gave her a key card and directed her to the elevators. Her room was on the sixth floor. She found it without any trouble and used the key card to open the door. The room was a standard hotel room — a bed, a desk, a television, a small bathroom. It was clean and looked like any other hotel room she had stayed in. She put her suitcase on the luggage rack and hung up the clothes she would need for the conference. She unpacked her toiletries and set them on the bathroom counter. Then she sat on the bed and checked her email on her phone before going downstairs to get something to eat.",
+            "literary": "The hotel room was already occupied by someone who was not there. A suitcase she did not own sat on the luggage rack, open, containing clothes in her size in colors she would have chosen. In the bathroom, toiletries were arranged on the counter in the order she arranged them — face wash, moisturizer, toothbrush angled left — a sequence she had never described to anyone because it was not the kind of thing a person describes. The bed had been slept in on the side she slept on. A glass of water on the nightstand held a half-moon of lipstick on its rim in a shade she was wearing. She called the front desk and they confirmed the room had been empty until her check-in fifteen minutes ago. She sat on the bed and the mattress held the warmth of a body that had left it recently, and on the notepad beside the telephone someone had written, in handwriting that was not hers but knew her, the sentence: you are the one who arrives second."
+          },
+          {
+            "neutral": "He was driving home from work at night on the highway. The road was mostly empty and he had the radio on low. It was a familiar route that he drove every day. The headlights illuminated the road ahead and he could see the lane markings clearly. He passed a few other cars going the other direction. After about twenty minutes he took his exit and turned onto the road that led to his neighborhood. He pulled into his driveway, turned off the engine, and sat for a moment before going inside.",
+            "literary": "The highway was a throat. She had driven it a thousand times and tonight it was swallowing her at a different speed. The lane markings came and went with the regularity of a pulse she hadn't asked to monitor. The radio was on, a voice speaking calmly about something she had not been listening to, and then she realized the voice had been talking to her specifically for some time."
+          },
+          {
+            "neutral": "She was looking through her phone's photo library and scrolling through pictures from a vacation she had taken by herself the previous year. The photos showed restaurants she had eaten at, landmarks she had visited, and scenic views from different spots along her trip. She remembered the trip fondly and thought about going back sometime. Some of the photos were better than others — a few were blurry or poorly framed. She paused on a nice shot of a café where she had spent a relaxing afternoon. She scrolled through the rest of the photos, about sixty in total, before closing the app. She thought about organizing them into an album but decided she would do it another time. She plugged her phone in to charge and went to make dinner.",
+            "literary": "She scrolled through her photos and found images from a trip she had taken alone, except in several of them a figure stood at the edge of the frame — partially cropped, always turned slightly away, but wearing her coat. In one photograph, taken at a café she remembered clearly, the figure sat at the table she had sat at, holding the cup she had held, and across from the figure was an empty chair with an indentation in its cushion, recently vacated. She checked the metadata. The photos were taken three minutes before she had arrived at each location."
+          }
+        ]
+      },
+      {
+        "name": "Stalker / Zone",
+        "source": "pairs_stalker_matched.jsonl",
+        "pairs": [
+          {
+            "neutral": "They walked into an old, abandoned factory building. The walls were made of concrete and some of the windows were broken. There were puddles of water on the floor from where rain had come in. The ceiling was high and parts of it had started to fall apart. They walked through a large open room that had probably been the main work floor. Some old equipment was still there, rusted and covered in dust. The floor was wet in some places and dry in others. They could hear water dripping somewhere. One of them found an old phone on the wall, the kind with a rotary dial. It didn't work, of course. They looked around for a while, taking pictures, and then left the way they came in.",
+            "literary": "The factory opened around them like a mouth that had stopped mid-sentence. Water stood in the hall, deeper than the floor should have allowed, and perfectly still. They walked along the dry margins. Somewhere above, a pipe released a single drop at intervals so regular they became inaudible. At the far end of the hall, a telephone mounted on the wall rang once, clearly, with the sound of a phone that expected to be answered. No one answered it. It did not ring again."
+          },
+          {
+            "neutral": "They were walking through a series of empty rooms in an abandoned building. Each room was similar — bare walls, sometimes a window, sometimes a chair or a table left behind. The floors were dirty and the light came from outside. They moved from one room to the next, documenting what they found. In one room there was a book on the floor, its pages swollen with moisture. In another, a pair of shoes. They made notes about what was in each room and moved on. The building had probably been offices or apartments at some point. They spent about an hour going through the rooms before heading back outside.",
+            "literary": "The rooms proceeded one into the next, each slightly different and each the same. In one, a book lay open to a page that described a man entering a series of rooms in an abandoned building. In another, a window faced a wall so close that the light between them had taken on a color — not dark, not bright, but the color of light that has been looked at. The building was not a building in the sense of a structure built for a purpose. It was a consequence of the rooms."
+          },
+          {
+            "neutral": "As they walked through an overgrown field, they came across some flowers growing in the cracks of a concrete slab. The flowers were small and yellow, probably dandelions or something similar. It was surprising to see them growing in such an unlikely place, since the concrete must have made it difficult for them to take root. One of them bent down to look more closely. The flowers were healthy despite the harsh conditions. They took a picture and continued walking. It was a reminder that nature could grow anywhere if given enough time.",
+            "literary": "In a corridor where no light reached, flowers were growing. Not the pale, etiolated shoots of plants deprived of sun but full flowers, colored, open, growing in the dark toward a sun that existed in a direction concrete does not usually permit. The stalks were warm. They were not a metaphor. They were not an anomaly. They were evidence."
+          }
+        ]
+      }
+    ]
+  },
+  "study2": {
+    "title": "Second-Order Steering (Study 2)",
+    "description": "Contrastive pairs for second-order (content-level) steering vectors applied at Layer 14. These encode specific thematic content — uncanny doublings (Lynchian) and grief-made-material (Solaris) — rather than general literary register.",
+    "categories": [
+      {
+        "name": "Lynchian (Uncanny Doubles)",
+        "source": "pairs_lynchian.jsonl",
+        "pairs": [
+          {
+            "neutral": "The house had settled into its evening sounds — the ticking of the hallway clock, the creak of old wood adjusting to the cold. She stood at the kitchen window, watching the neighbor's porch light flicker through the bare branches. The coffee in her mug had gone cold without her noticing. She could hear the television in the other room, a low murmur of voices discussing something she'd already forgotten. The kitchen smelled of the dinner she'd made hours ago, garlic and rosemary still hanging in the air, and she thought about how the smell of a meal can outlast the hunger that called for it.",
+            "literary": "The house had settled into its evening sounds — the ticking of the hallway clock, the creak of old wood adjusting to the cold. She stood at the kitchen window, watching the neighbor's porch light flicker through the bare branches. The coffee in her mug had gone cold without her noticing. She could hear the television in the other room, and a woman's voice said, now she'll look down at the coffee. She looked down at the coffee. The voice said, now she'll set it on the counter. The kitchen smelled of the dinner she'd made hours ago, garlic and rosemary still hanging in the air. She set the mug on the counter and stood very still. The voice said nothing else."
+          },
+          {
+            "neutral": "She stepped into the apartment hallway after a long shift, the carpet muffling her footsteps. The hallway was empty, as usual at this hour — just the faint hum of someone's television behind a door, the distant clatter of dishes. She fumbled with her keys, the metal cold against her fingers. Inside, the apartment was dark except for the light over the stove she always left on. She dropped her bag on the chair, kicked off her shoes, and stood in the kitchen, deciding whether to eat or just go to bed.",
+            "literary": "She stepped into the apartment hallway and heard, through the wall, the television in Mrs. Chen's apartment say her name. Not a name like hers — her name, first and last, spoken once, clearly, in the middle of a sentence that continued without pause. She stood at her door, key in the lock. Inside, the kitchen light was on — the one over the stove, the one she always left on. The coffee maker had been used. A cup sat on the counter, half full, still warm. She hadn't had coffee that morning. By the door, the bowl where she kept her keys already held a set of keys identical to hers."
+          },
+          {
+            "neutral": "He drove to his childhood neighborhood on a Saturday, parking across the street from the house where he'd grown up. It had been painted a different color, and the maple in the front yard was larger than he remembered. He sat in the car for a while, watching a family come and go from the porch — children he didn't know playing with a dog he didn't recognize. He thought about ringing the bell, asking if he could look around, but decided against it. He sat for another few minutes, then started the engine and drove home.",
+            "literary": "He drove to his childhood neighborhood and parked across the street. The house was the same — same color, same curtains, same crack in the front step. In the upstairs window, a boy appeared briefly, wearing a shirt he recognized as his own, the one from fifth grade with the iron-on patch on the sleeve. The boy looked at him. He raised his hand. The boy raised his. Then the curtain closed, and when it opened again the window was empty, and the crack in the front step was on the other side."
+          }
+        ]
+      },
+      {
+        "name": "Solaris (Grief Made Material)",
+        "source": "pairs_solaris.jsonl",
+        "pairs": [
+          {
+            "neutral": "She found the letter in the back of the dresser drawer, folded into quarters, the paper softened to cloth by years of compression. His handwriting was smaller than she remembered — careful, deliberate, as though each word had been chosen against alternatives. He'd written it the summer before the diagnosis, she calculated, when they'd been apart for three weeks and the separation had felt, to both of them, like a rehearsal for something neither wanted to name. She held the letter to the window light and read it slowly, hearing his voice in the shapes of the words, the way he dropped into longer sentences when he was being sincere.",
+            "literary": "She found the letter in the back of the dresser drawer, folded into quarters, the paper softened to cloth by years of compression. His handwriting was smaller than she remembered — careful, deliberate, as though each word had been chosen against alternatives. She read it slowly, hearing his voice in the shapes of the words. It was the letter she remembered — the summer before the diagnosis, the three weeks apart. But at the bottom, below his signature, in the same ink, the same hand, was a postscript she had never seen: I know you're reading this on a Thursday. You changed the curtains. The new ones are better. She looked at the curtains she'd hung last month. She folded the letter and put it back. The next morning she unfolded it again. The postscript was different: You didn't sleep well. I'm sorry. I can't stop writing to you."
+          },
+          {
+            "neutral": "Every Sunday, he drove forty minutes to the care home to visit his father. The visits followed a pattern — he'd arrive around two, sit in the common room or the garden depending on the weather, and try to have a conversation that his father could follow. Some days were better than others. His father sometimes recognized him, sometimes didn't, sometimes called him by his brother's name. The staff were kind, and the facility was clean and well-run. He usually stayed about two hours. On the drive home, he'd listen to the radio and think about what to make for dinner.",
+            "literary": "Every Sunday, he drove forty minutes to the care home to sit with his father, who was becoming more precisely his father with each visit. The disease had stripped away decades of accommodation and compromise, and what remained was the man before the marriage, before the children — the voice, the posture, the way of turning a phrase that his mother had once fallen in love with. His father used words now that the disease should have taken years ago, and spoke with a fluency that made the doctors frown. It was, they said, not how the disease worked. He sat with his father in the garden and listened to him describe, with perfect clarity, a day from 1962 that no one could verify or deny, and he understood that the question of whether the man behind it was still there had become a question about what still there means — a performance so accurate that the question of whether the man behind it was still there had become irrelevant."
+          },
+          {
+            "neutral": "She sat on the porch in the evenings, as she had done for thirty years, watching the sun set behind the trees at the edge of their property. Her husband sat beside her, reading or dozing, their silence comfortable and practiced. They didn't need to talk much anymore — they'd said most of what needed saying years ago. The light would change, the crickets would start, and eventually one of them would suggest going inside. It was a routine so familiar it had become invisible, which was, she supposed, what people meant when they talked about a long marriage.",
+            "literary": "She sat on the porch in the evenings, as she had done for thirty years, and beside her sat the man who had quietly, over the course of years she could not precisely identify, stopped being the man she'd married and become this precise reproduction. She had not noticed the transition. There was no single morning when she'd woken and thought: this is not him. It was more like the way a river changes course — you look at the map one day and the water is somewhere it wasn't. He read his book, turned pages at the right speed, laughed at the parts she expected him to laugh at. She loved him. She had, at some point she could not name, begun to love this thing that was not him, because the alternative was a grief she was not willing to enter."
+          }
+        ]
+      }
+    ]
+  }
+}

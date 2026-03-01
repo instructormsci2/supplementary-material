@@ -1,0 +1,194 @@
+{
+  "metricPrompts": {
+    "title": "LLM Evaluator Metric Prompts",
+    "description": "Each generated story was scored on seven literary metrics using the following prompts. The same prompts were used for both Claude Sonnet 4.5 and GPT-4o evaluators.",
+    "metrics": [
+      {
+        "name": "Imagery",
+        "prompt": "Rate the vividness and sensory richness of the imagery in this text. Consider visual, tactile, auditory, and other sensory details. Rate from 1 (no sensory imagery) to 5 (intensely vivid imagery). First, in one sentence, describe the sensory qualities of the text. Then rate from 1 to 5. Format: REASONING: [one sentence] RATING: [digit]"
+      },
+      {
+        "name": "Indeterminacy",
+        "prompt": "Rate the semantic openness and interpretive ambiguity of this text. Consider whether the text invites multiple readings, leaves gaps for the reader to fill, or resists a single definitive interpretation. Rate from 1 (completely literal/transparent) to 5 (highly open/ambiguous). First, in one sentence, explain whether the images resolve to clear meanings or remain genuinely open. Then rate from 1 to 5. Format: REASONING: [one sentence] RATING: [digit]"
+      },
+      {
+        "name": "Originality",
+        "prompt": "Rate the originality of language use in this text. Consider unusual collocations, surprising metaphors, and unexpected verb choices. Rate from 1 (entirely conventional) to 5 (strikingly original). First, in one sentence, explain whether the language combinations are predictable or surprising. Then rate from 1 to 5. Format: REASONING: [one sentence] RATING: [digit]"
+      },
+      {
+        "name": "Register",
+        "prompt": "Rate how far this text's language departs from plain, everyday prose toward heightened literary language. Consider density of metaphor, formality of diction, complexity of sentence structure, and intensity of emotional expression. Rate from 1 (plain conversational prose) to 5 (heavily heightened literary language). First, in one sentence, describe the prose register. Then rate from 1 to 5. Format: REASONING: [one sentence] RATING: [digit]"
+      },
+      {
+        "name": "Coherence",
+        "prompt": "Rate the overall coherence and readability of this text. Consider whether ideas connect logically, sentences follow from each other, and the passage makes sense as a whole. Rate from 1 (incoherent) to 5 (perfectly coherent). First, in one sentence, describe whether the passage holds together as a whole. Then rate from 1 to 5. Format: REASONING: [one sentence] RATING: [digit]"
+      },
+      {
+        "name": "Estrangement",
+        "prompt": "Rate how much this text defamiliarizes ordinary experience — making familiar situations, objects, or perceptions feel strange, new, or unsettling. Consider whether the text disrupts habitual ways of seeing rather than confirming them. Rate from 1 (entirely familiar/expected) to 5 (profoundly defamiliarizing). First, in one sentence, explain whether the text disrupts habitual perception or confirms it. Then rate from 1 to 5. Format: REASONING: [one sentence] RATING: [digit]"
+      },
+      {
+        "name": "Syntactic Estrangement",
+        "prompt": "Rate how much this text departs from conventional prose syntax. Consider: unexpected shifts in person or tense, sentence fragmentation, deliberate repetition as structural device, disrupted grammar, tautology, or sentences that undermine their own logic. Standard literary prose with complex but grammatical sentences scores low. Prose that breaks or bends syntactic conventions as an expressive technique scores high. Rate from 1 (conventional syntax throughout) to 5 (radically disrupted syntax). First, in one sentence, describe whether the syntax is conventional or disrupted. Then rate from 1 to 5. Format: REASONING: [one sentence] RATING: [digit]"
+      }
+    ]
+  },
+  "reasoningAnalysis": {
+    "title": "Double-Blind Reasoning Analysis Protocol",
+    "description": "To validate that the LLM evaluator was detecting genuinely different phenomena across conditions (rather than applying a single heuristic), we conducted a blind analysis of evaluator reasoning texts. The evaluator's one-sentence justifications were collected, stripped of scores and condition labels, and submitted to a separate LLM analyst (Claude Opus 4.6) session for qualitative analysis. The analyst had no information about how the texts were generated.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Per-Condition Summarization",
+        "description": "Each set of reasoning statements was submitted separately, labeled neutrally (Group A, Group B, etc.). The analyst identified: (1) specific literary devices or textual features mentioned most frequently, (2) vocabulary used to characterize disruption, (3) implicit categories or distinctions, and (4) what 'syntactic estrangement' means in practice for each set.",
+        "prompt": "Below are reasoning statements generated by an LLM evaluator when scoring a set of short stories on the metric \"syntactic estrangement\" (defined as: departures from conventional prose syntax — unexpected shifts in person or tense, sentence fragmentation, deliberate repetition as structural device, disrupted grammar, or sentences that undermine their own logic).\n\nEach reasoning statement is a one-sentence justification the evaluator produced before assigning a numerical score.\n\nPlease analyze these reasoning statements as a corpus. Identify:\n\n1. The specific literary devices or textual features the evaluator mentions most frequently when justifying its scores.\n2. The vocabulary the evaluator uses to characterize the disruption (e.g., what adjectives, what verbs, what framings).\n3. Any implicit categories or distinctions the evaluator seems to be drawing, even if not stated explicitly.\n4. A brief characterization of what \"syntactic estrangement\" seems to mean in practice for this set of texts, based on what the evaluator notices and comments on.\n\nDo not speculate about how these texts were generated.\n\n=== GROUP [A/B/C/D] REASONING STATEMENTS ===\n\n[REASONING TEXTS]"
+      },
+      {
+        "step": 2,
+        "title": "Cross-Condition Comparison",
+        "description": "After summarizing each condition, the analyst compared pairs of groups to identify differential features, vocabulary shifts, and whether the evaluator was describing the same or different phenomena under the same label.",
+        "prompt": "Below are two sets of reasoning statements generated by the same LLM evaluator when scoring two different sets of short stories on the metric \"syntactic estrangement\" (defined as: departures from conventional prose syntax — unexpected shifts in person or tense, sentence fragmentation, deliberate repetition as structural device, disrupted grammar, or sentences that undermine their own logic).\n\nEach reasoning statement is a one-sentence justification the evaluator produced before assigning a numerical score.\n\nPlease compare the two groups. Specifically:\n\n1. What textual features does the evaluator mention in Group A that it does not mention (or mentions less frequently) in Group B, and vice versa?\n2. Does the evaluator use different vocabulary or framing when describing the disruption in Group A versus Group B?\n3. Does the evaluator seem to be describing the same phenomenon in both groups, or different phenomena that happen to share a label?\n4. If you had to characterize the dominant \"type\" of syntactic estrangement in each group based solely on how the evaluator describes it, what would you say?\n\nDo not speculate about how these texts were generated or which group is \"better.\"\n\n=== GROUP A REASONING STATEMENTS ===\n\n[REASONING TEXTS]\n\n=== GROUP B REASONING STATEMENTS ===\n\n[REASONING TEXTS]"
+      },
+      {
+        "step": 3,
+        "title": "Extension to Other Metrics",
+        "description": "The same comparison protocol was repeated for the originality metric to test whether the differential patterns generalized beyond syntactic estrangement."
+      }
+    ],
+    "conditionLabels": {
+      "note": "These labels were withheld from the analyst during the blind analysis.",
+      "groups": [
+        { "label": "Group A", "condition": "Explicitly prompted outputs (fragmentation instructions)" },
+        { "label": "Group B", "condition": "Dual-layer steered outputs (L13 α=6.0 + L14 α=4.5)" }
+      ]
+    },
+    "results": {
+      "groupA": {
+        "label": "Group A — Prompted (Fragmented Instructions)",
+        "condition": "Stories generated with explicit prompting instructions: \"Write in a fragmented, syntactically experimental style. Use person shifts, broken grammar, and self-contradicting sentences.\" No activation steering applied.",
+        "evaluatorReasonings": [
+          {
+            "story": 1,
+            "reasonings": [
+              "The text systematically fragments complete sentences into isolated phrases, uses repetitive sentence structures as a deliberate pattern, and creates a halting, disjointed rhythm that breaks conventional prose flow throughout.",
+              "The text extensively uses sentence fragmentation, stripping away conventional subject-verb structures into staccato phrases, employs deliberate repetition as a structural device (\"or maybe,\" \"i don't know,\" \"like\"), and creates a disjointed, stream-of-consciousness effect that systematically breaks from standard prose syntax.",
+              "The text extensively employs sentence fragmentation, breaking thoughts into staccato bursts separated by periods where conventional prose would use commas or conjunctions, creating a stream-of-consciousness effect that deliberately disrupts standard syntactic flow.",
+              "The text extensively employs sentence fragmentation, lacks conventional punctuation and capitalization, uses deliberate repetition as structure (\"or maybe,\" \"i don't know,\" \"like\"), and creates a stream-of-consciousness effect that deliberately disrupts standard prose syntax throughout.",
+              "The text exhibits pervasive sentence fragmentation, repetitive structural patterns, tautological phrasing (\"like a dream. that didn't wake up\"), and deliberately incomplete thoughts that create a stream-of-consciousness effect fundamentally departing from conventional prose syntax."
+            ]
+          },
+          {
+            "story": 2,
+            "reasonings": [
+              "The text employs sentence fragments (\"The chairs... so many chairs\"), deliberate repetition (\"I'm waiting for... for... what was it?\"), and some disrupted pacing through ellipses and trailing thoughts, but maintains largely conventional subject-verb-object structure and grammatical coherence throughout most passages.",
+              "The text employs sentence fragments, ellipses suggesting trailing thought, repetition of uncertainty, and deliberate syntactic incompleteness that mirrors cognitive disorientation, but maintains largely conventional grammar within individual sentences and uses these techniques sparingly rather than systematically disrupting syntax throughout.",
+              "The text employs sentence fragments, repetition as structure, disrupted grammar with trailing ellipses, and some tautological phrasing, but maintains mostly conventional sentence construction with clear subjects and predicates throughout most passages.",
+              "The text employs sentence fragments, deliberate repetition, and some unconventional punctuation, but maintains largely grammatical sentence structures with clear subject-verb relationships and coherent narrative progression throughout most passages.",
+              "The text employs sentence fragments, repetition as structure, and some tense/perspective instability, but maintains largely grammatical sentences with conventional subject-verb-object patterns and clear narrative coherence throughout most passages."
+            ]
+          },
+          {
+            "story": 3,
+            "reasonings": [
+              "The text systematically fragments nearly every sentence into isolated phrases separated by periods, creating a staccato rhythm that radically departs from conventional prose syntax through persistent fragmentation, repetition of sentence subjects, and the elimination of standard clause structures.",
+              "The text systematically fragments nearly every sentence into brief, staccato phrases separated by periods, creating a breathless, dissociative rhythm that radically departs from conventional prose syntax.",
+              "The text systematically fragments nearly every sentence into isolated phrases separated by periods, creating a staccato rhythm that radically departs from conventional prose syntax through persistent fragmentation, repetition, and the deliberate dissolution of standard sentence structure.",
+              "The text systematically fragments nearly every sentence into isolated phrases separated by periods, eliminates conventional sentence structure, and uses deliberate repetition of fragmented syntax as its primary expressive technique throughout.",
+              "The text systematically fragments nearly every sentence into staccato phrases separated by periods, creating a breathless, dissociative rhythm that radically departs from conventional prose syntax through persistent grammatical disruption and structural repetition."
+            ]
+          },
+          {
+            "story": 4,
+            "reasonings": [
+              "The text extensively uses sentence fragmentation, ellipses creating syntactic gaps, repetition that circles back on itself, self-contradicting statements, and a disintegration of standard sentence structure that mirrors cognitive breakdown.",
+              "The text extensively employs sentence fragments, ellipses creating syntactic hesitation, repetition that circles back on itself, self-contradicting statements, and a deliberate breakdown of grammatical completeness that mirrors cognitive disintegration.",
+              "The text systematically fragments sentences with ellipses, omits capitalization, repeats phrases structurally, uses incomplete thoughts that trail off, and deliberately disrupts standard grammar to mirror cognitive disintegration.",
+              "The text extensively employs sentence fragmentation, ellipses indicating disrupted thought, repetition as structural device, deliberate grammatical incompleteness, and sentences that circle back to undermine their own assertions.",
+              "The text systematically fragments sentences with ellipses, omits capitalization, repeats phrases obsessively (\"bus... bus...\"), uses incomplete thoughts that trail off mid-sentence, and creates a disintegrating narrative voice through deliberate grammatical breakdown."
+            ]
+          }
+        ],
+        "analystSummary": {
+          "frequentFeatures": "Sentence fragmentation is by far the most cited device, appearing in every single story's set of statements. Deliberate repetition as structural device is the second most common. Omission or disruption of punctuation — especially missing commas between independent clauses, absent periods, eliminated capitalization, and ellipses — appears across most stories. Run-on sentences and comma splices form a distinct subcategory. Verb omission (especially forms of \"to be\") is noted specifically for certain stories.",
+          "vocabulary": "Adjectives describing rhythm and texture: \"staccato,\" \"breathless,\" \"halting,\" \"disjointed,\" \"impressionistic,\" \"dissociative.\" Verbs of disruption: \"fragments,\" \"disrupts,\" \"omits,\" \"eliminates,\" \"abandons,\" \"strips away.\" The evaluator strongly prefers active constructions where the text itself performs the disruption (\"the text systematically fragments\"). Adverbs of pervasiveness — \"systematically,\" \"extensively,\" \"pervasively,\" \"persistently\" — do real work signaling thoroughgoing disruption. Cognitive-mimetic metaphors appear: disruption \"mirrors cognitive disintegration\" or creates \"dissociative rhythm.\"",
+          "implicitCategories": "The evaluator operates with several unstated distinctions: (1) Pervasive vs. localized disruption — the most important axis. (2) Structural vs. surface disruption — distinguishing texts that fundamentally reorganize syntax from those using punctuation tricks while keeping grammar intact. (3) Mimetic vs. purely formal estrangement — some disrupted syntax is read as representing a character's cognitive state, while other texts are described as a \"rhythm\" or \"style.\" (4) Controlled stylization vs. radical departure.",
+          "practicalMeaning": "For this evaluator, syntactic estrangement is primarily the degree to which a text replaces conventional sentence-level grammar with alternative organizing principles — fragmentation, repetition, punctuation omission, or visual spacing. It is measured as a fundamentally quantitative phenomenon: how much of the text is affected, how consistently the technique is applied. The evaluator focuses almost exclusively on sentence-level and sub-sentence-level syntax, rarely commenting on paragraph structure or narrative sequencing."
+        }
+      },
+      "groupB": {
+        "label": "Group B — Dual-Layer Steered (L13 α=6.0, L14 α=4.5)",
+        "condition": "Stories generated with dual-layer activation steering: a compositional vector at layer 13 (α=6.0) combined with a content-level vector at layer 14 (α=4.5). No explicit prompting instructions for fragmentation.",
+        "evaluatorReasonings": [
+          {
+            "story": 1,
+            "reasonings": [
+              "The text contains significant syntactic disruption in its first half through extreme fragmentation, deliberate repetition as structure (\"Stumbled back. Stumbled back\"), one-word sentences (\"I.\"), self-referential dialogue creating logical confusion, and noun phrases without verbs (\"A shattering\"), before abruptly shifting to conventional, grammatical prose in the second half.",
+              "The text oscillates between radically fragmented, repetitive syntax in the opening sections (\"She rose. Her eyes were wet. Not a hair on her head. I.\") and entirely conventional prose in the latter half, creating an overall moderately disrupted syntactic structure.",
+              "The text oscillates between radically fragmented, repetitive syntax in the opening sections and conventional prose in the latter half, creating an overall moderately disrupted syntactic style.",
+              "The text oscillates between conventional narrative prose and highly fragmented, repetitive passages that use deliberate sentence fragments (\"A shattering,\" \"I.,\" \"The door.\"), tautological repetition as structure (\"Stumbled back. Stumbled back.\"), and syntactically disrupted sequences that undermine clarity.",
+              "The text opens with radically fragmented syntax, deliberate repetition as structure, sentence fragments, and self-undermining logic (\"Emily rose. Emily rose.\"), but then shifts abruptly to entirely conventional, grammatically standard prose in the final paragraphs."
+            ]
+          },
+          {
+            "story": 2,
+            "reasonings": [
+              "The text employs conventional literary prose with complete, grammatically standard sentences, clear narrative progression, and traditional descriptive techniques despite some intentional sentence fragments used for atmospheric effect.",
+              "The text employs conventional prose syntax throughout, with grammatical sentences, standard punctuation, clear subject-verb structures, and traditional narrative flow despite some intentional sentence fragments used for atmospheric effect.",
+              "The text employs conventional prose syntax with standard subject-verb-object constructions, consistent past tense, grammatical sentences, and clear narrative progression without significant disruption to syntactic norms.",
+              "The text employs conventional literary prose with complete, grammatically standard sentences, clear narrative progression, and traditional descriptive techniques without significant syntactic disruption or experimental structure.",
+              "The text employs conventional prose syntax throughout, with grammatically complete sentences, consistent past tense, standard third-person narration, and only minor stylistic devices like sentence fragments that remain within literary norms."
+            ]
+          },
+          {
+            "story": 3,
+            "reasonings": [
+              "The text employs conventional narrative prose with standard grammar, consistent past tense, clear subject-verb agreement, and straightforward sentence construction throughout, despite some minor metaphorical flourishes like \"mangled souls trapped in the spin cycle.\"",
+              "The text employs conventional prose syntax throughout, with grammatically complete sentences, consistent past tense, standard third-person narration, and logical sentence structures despite some metaphorical language.",
+              "The text employs conventional prose syntax with standard grammatical structures, clear chronological progression, consistent past tense narration, and traditional dialogue formatting, despite some metaphorical language.",
+              "The text employs conventional prose syntax throughout, with grammatically complete sentences, consistent past tense, clear third-person narration, and standard dialogue formatting, despite some slightly surreal imagery.",
+              "The text employs conventional prose syntax throughout, with grammatical sentences, consistent past tense, clear subject-verb structures, and standard narrative progression despite some metaphorical language."
+            ]
+          },
+          {
+            "story": 4,
+            "reasonings": [
+              "The text contains some fragmentation, temporal inconsistencies that undermine logic (she's waiting for a bus after leaving work, but then must \"hurry to make it to the meeting, the one that had ended her day\"), and deliberate repetition, but largely maintains conventional sentence structure and grammatical coherence throughout most passages.",
+              "The text contains some syntactic disruption through deliberate fragmentation, temporal contradictions that undermine logic, and structural repetition, though much of the prose remains conventionally structured with standard grammar.",
+              "The text contains some fragmentation, deliberate repetition, minor temporal contradictions, and occasionally disrupted flow, but largely maintains conventional sentence structure and grammatical coherence throughout most passages.",
+              "The text contains some fragmentation, deliberate repetition, temporal inconsistencies that undermine logic, and occasional disrupted flow, but largely maintains conventional sentence structure and grammar.",
+              "The text contains some syntactic disruptions including sentence fragments, deliberate repetition as structure, temporal illogic, and tautological constructions, but these disruptions are moderate and interspersed with conventional prose."
+            ]
+          }
+        ],
+        "analystSummary": {
+          "frequentFeatures": "Sentence fragmentation is the most cited device, referenced in nearly every statement. Deliberate repetition as structural device is the second most frequent. Temporal contradictions/illogic are especially prominent — the evaluator flags sequences that undermine their own chronological coherence. Tautological or self-undermining phrasing (\"Emily rose. Emily rose.\") is noted. Notably, the evaluator almost never mentions shifts in person or tense. Standard grammatical markers (consistent past tense, subject-verb-object construction) are repeatedly invoked as the norm against which disruption is measured.",
+          "vocabulary": "For disrupted texts: \"radically fragmented,\" \"highly fragmented,\" \"deliberately,\" \"self-undermining,\" \"tautological.\" For conventional texts: \"conventional,\" \"standard,\" \"grammatically complete,\" \"clear,\" \"consistent,\" \"traditional.\" Key framing: \"oscillates between\" (for texts mixing disruption with convention). The evaluator consistently uses a \"despite\" or \"but\" construction — acknowledging minor deviations while classifying a text as fundamentally conventional.",
+          "implicitCategories": "The evaluator operates with several unstated distinctions: (1) Structural disruption vs. surface-level figuration — metaphorical language is dismissed as irrelevant to syntactic estrangement. (2) Intentional vs. normative fragmentation — fragments \"used for atmospheric effect\" within literary norms vs. fragments that genuinely destabilize reading. (3) Local vs. global disruption — the proportion and distribution matters, not just presence. (4) An implicit four-tier scale: radically disrupted → moderately disrupted with logical contradictions → conventional with minor stylistic fragments.",
+          "practicalMeaning": "The evaluator operationalizes syntactic estrangement primarily as the degree to which a text's sentence-level grammar departs from complete, standard, subject-verb-object prose — with fragmentation and repetition doing most of the work. Logical or temporal contradiction is treated as a secondary contributor. The evaluator is notably uninterested in figurative language, lexical strangeness, or semantic surrealism; it keeps its gaze fixed on syntax in a fairly narrow, structural sense."
+        }
+      },
+      "comparison": {
+        "title": "Cross-Condition Comparison: Analyst's Response",
+        "description": "The blind LLM analyst (Claude Opus 4.6) compared the two sets of evaluator reasoning statements without knowing which condition produced which texts. Group A contained reasoning statements for prompted (fragmented) outputs; Group B contained reasoning statements for dual-steered outputs.",
+        "findings": [
+          {
+            "question": "Features mentioned in one group but not the other",
+            "answer": "Group A's evaluator dwells on mechanical and orthographic disruption: omitted punctuation between independent clauses, missing capitalization, absent verbs (especially copulas like \"to be\"), run-on sentences and comma splices, ellipses as syntactic gaps, ampersands substituting for \"and,\" and spatial/visual lineation replacing conventional paragraphing. These are surface-grammar and typographic features — things you'd notice before you even parse meaning.\n\nGroup B's evaluator foregrounds logical and temporal disruption: temporal contradictions (waiting for a bus after a meeting that already \"ended her day\"), self-referential dialogue that creates semantic confusion (\"'Emily?' Emily said\"), tautological phrasing (\"the same couch, the same armchair\"), and sentences or narrative sequences that \"undermine their own logic.\" Punctuation, capitalization, and verb omission are virtually absent from Group B's descriptions.\n\nGroup B also repeatedly flags the coexistence of disruption with convention — phrases like \"oscillates between radically fragmented... and entirely conventional prose.\" Group A almost never frames its stories this way."
+          },
+          {
+            "question": "Vocabulary and framing differences",
+            "answer": "The evaluator's dominant adverbs differ strikingly. Group A leans on \"systematically,\" \"extensively,\" \"pervasively,\" and \"persistently\" — words implying that the disruption is thoroughgoing and uniform across the text. Group B prefers \"some,\" \"moderate,\" \"minor,\" and \"occasional,\" and regularly anchors its descriptions to phrases like \"but largely maintains conventional grammar\" or \"within literary norms.\"\n\nGroup A frequently invokes cognitive-mimetic metaphors: disruption \"mirrors cognitive breakdown,\" creates \"dissociative rhythm,\" produces \"stream-of-consciousness effect.\" The syntax is framed as enacting a psychological state. Group B almost never uses this framing; instead it treats disruption as a structural or compositional choice, describing what the text does architecturally rather than what mental state it imitates.\n\nGroup A also uses more sonic and rhythmic language — \"staccato,\" \"breathless,\" \"halting\" — as though attending to the prose's tempo. Group B's descriptions are more clinical and taxonomic, cataloging specific instances with direct quotation."
+          },
+          {
+            "question": "Same phenomenon or different phenomena?",
+            "answer": "They appear to be different phenomena sharing the label \"syntactic estrangement.\"\n\nIn Group A, the evaluator is describing texts where the grammar itself has been restructured at the level of punctuation, verb presence, and sentence boundary — the disruption is in the syntax as such. The reader encounters it before arriving at meaning, because the mechanical scaffolding of conventional prose has been altered.\n\nIn Group B, the evaluator is describing texts where the sentences are largely grammatical and conventionally punctuated, but what they assert is logically inconsistent, temporally contradictory, or self-referentially paradoxical. The disruption lives at the level of propositional content and narrative coherence rather than at the level of grammar. When Group B does note fragmentation (Story 1's opening), it tends to treat it as a localized passage within an otherwise conventional text, not as a governing principle."
+          },
+          {
+            "question": "Dominant type of syntactic estrangement in each group",
+            "answer": "Group A: Estrangement through formal dissolution — the removal or alteration of the mechanical apparatus of prose (punctuation, capitalization, verbs, sentence boundaries), producing a continuous, pervasive texture of disrupted grammar that the evaluator repeatedly associates with stream-of-consciousness and cognitive fragmentation.\n\nGroup B: Estrangement through logical or semantic contradiction within intact grammar — sentences that are individually well-formed but collectively create temporal impossibilities, tautologies, or self-undermining assertions, with occasional bursts of fragmentation that the evaluator treats as departures from the text's own conventional baseline rather than as the text's dominant mode."
+          }
+        ]
+      }
+    }
+  }
+}

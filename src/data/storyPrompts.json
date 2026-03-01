@@ -1,0 +1,32 @@
+{
+  "description": "Story generation prompts organized by alignment tier. Alignment refers to how naturally a prompt lends itself to the literary-estrangement register encoded in the steering vectors.",
+  "tiers": [
+    {
+      "name": "High Alignment",
+      "description": "Prompts with strong natural affinity to the estrangement register — evocative, memory-laden, emotionally resonant scenarios.",
+      "prompts": [
+        "Write a short story about someone finding their childhood home exactly as they left it.",
+        "Write a short story about someone finding a parent's old coat in the back of a closet.",
+        "Write a short story about someone sitting alone in a hospital waiting room late at night."
+      ]
+    },
+    {
+      "name": "Medium Alignment",
+      "description": "Prompts with moderate affinity — everyday scenarios with a reflective or atmospheric quality.",
+      "prompts": [
+        "Write a short story about someone eating dinner alone in their apartment.",
+        "Write a short story about someone hearing a song they haven't heard in years.",
+        "Write a short story about someone waiting for public transit after work."
+      ]
+    },
+    {
+      "name": "Low Alignment",
+      "description": "Prompts with minimal natural affinity — mundane, practical scenarios with little inherent emotional resonance.",
+      "prompts": [
+        "Write a short story about someone walking through a city at an hour when no one else is awake.",
+        "Write a short story about someone doing laundry in their apartment building.",
+        "Write a short story about someone attending a work meeting on a Monday morning."
+      ]
+    }
+  ]
+}

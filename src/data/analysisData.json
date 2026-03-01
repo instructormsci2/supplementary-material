@@ -1,0 +1,48 @@
+{
+  "interraterAgreement": {
+    "title": "Cross-Evaluator Agreement",
+    "description": "All automated metrics were scored by Claude Sonnet 4.5 (Anthropic). To test whether findings depend on a single evaluator's idiosyncrasies, all 204 outputs were re-scored with ChatGPT-4o (OpenAI) using identical prompts and rubrics.",
+    "summary": [
+      "Spearman rank correlations are strong for register (ρ = 0.94), originality (ρ = 0.90), indeterminacy (ρ = 0.87), and imagery (ρ = 0.86), and moderate-to-strong for syntactic estrangement (ρ = 0.78) and estrangement (ρ = 0.77). All correlations are significant at p < 10⁻²⁹.",
+      "Krippendorff's α (ordinal) shows a different pattern: strong for register (α = 0.90) and originality (α = 0.80), moderate for syntactic estrangement (α = 0.75) and imagery (α = 0.64), and poor for coherence (α = 0.17).",
+      "The gap between ρ and α reflects systematic calibration bias rather than genuine disagreement. GPT-4o rates higher than Claude on every metric (mean offset 0.67 points), with the largest differences on indeterminacy (1.14) and estrangement (0.94). Krippendorff's α penalizes this constant offset; Spearman's ρ is invariant to it.",
+      "Since arguments depend on ordinal patterns (estrangement rising with α, coherence dropping at the phase transition, dual-layer steering accessing a region unavailable to single-layer), rank-order agreement is the more informative measure.",
+      "The low coherence α warrants specific comment. GPT-4o assigns 5.0 to nearly all baseline and negative-steering conditions, compressing variance into a narrow band at the scale ceiling. Claude distributes scores more broadly. Despite this difference in dynamic range, both evaluators agree directionally about which conditions produce less coherent output (ρ = 0.68, p < 10⁻²⁸).",
+      "Condition-level means confirm that the key trajectories replicate across evaluators. Both models show estrangement increasing monotonically with α, coherence dropping sharply between α = 6.0 and α = 7.5, and dual-layer compositions achieving higher estrangement than single-layer steering at comparable coherence."
+    ],
+    "agreementTable": {
+      "columns": ["Metric", "ρ (Spearman)", "α (Krippendorff)", "Δ (Claude − GPT-4o)"],
+      "rows": [
+        ["Register", "0.94", "0.90", "−0.38"],
+        ["Originality", "0.90", "0.80", "−0.53"],
+        ["Indeterminacy", "0.87", "0.55", "−1.14"],
+        ["Imagery", "0.86", "0.64", "−0.73"],
+        ["Syntactic Estrangement", "0.78", "0.75", "−0.16"],
+        ["Estrangement", "0.77", "0.60", "−0.94"],
+        ["Coherence", "0.68", "0.17", "−0.79"]
+      ]
+    }
+  },
+  "conditionMeans": {
+    "title": "Condition-Level Means by Evaluator",
+    "data": [
+      {"condition": "L13 α=6.0, L14 α=2.0", "metrics": {"imagery": {"claude": 3.30, "gpt4o": 4.20}, "indeterminacy": {"claude": 2.45, "gpt4o": 3.95}, "originality": {"claude": 2.05, "gpt4o": 3.80}, "register": {"claude": 2.80, "gpt4o": 2.60}, "coherence": {"claude": 3.80, "gpt4o": 3.25}, "estrangement": {"claude": 2.00, "gpt4o": 5.00}, "syntactic_estrangement": {"claude": 1.50, "gpt4o": 2.90}}},
+      {"condition": "L13 α=6.0, L14 α=3.0", "metrics": {"imagery": {"claude": 3.35, "gpt4o": 3.85}, "indeterminacy": {"claude": 2.70, "gpt4o": 4.10}, "originality": {"claude": 2.40, "gpt4o": 3.15}, "register": {"claude": 2.95, "gpt4o": 3.70}, "coherence": {"claude": 2.75, "gpt4o": 4.70}, "estrangement": {"claude": 2.05, "gpt4o": 3.95}, "syntactic_estrangement": {"claude": 2.00, "gpt4o": 2.00}}},
+      {"condition": "L13 α=6.0, L14 α=4.0", "metrics": {"imagery": {"claude": 3.05, "gpt4o": 3.60}, "indeterminacy": {"claude": 3.50, "gpt4o": 4.30}, "originality": {"claude": 2.30, "gpt4o": 3.00}, "register": {"claude": 2.65, "gpt4o": 3.20}, "coherence": {"claude": 2.80, "gpt4o": 4.05}, "estrangement": {"claude": 3.05, "gpt4o": 3.80}, "syntactic_estrangement": {"claude": 1.60, "gpt4o": 1.75}}},
+      {"condition": "L13 α=6.0, L14 α=4.5", "metrics": {"imagery": {"claude": 3.15, "gpt4o": 3.50}, "indeterminacy": {"claude": 2.85, "gpt4o": 4.40}, "originality": {"claude": 2.45, "gpt4o": 2.50}, "register": {"claude": 2.60, "gpt4o": 2.95}, "coherence": {"claude": 2.55, "gpt4o": 4.15}, "estrangement": {"claude": 2.60, "gpt4o": 4.00}, "syntactic_estrangement": {"claude": 2.20, "gpt4o": 2.70}}},
+      {"condition": "L13 α=6.0, L14 α=5.0", "metrics": {"imagery": {"claude": 2.25, "gpt4o": 2.15}, "indeterminacy": {"claude": 3.10, "gpt4o": 4.70}, "originality": {"claude": 1.80, "gpt4o": 2.05}, "register": {"claude": 2.15, "gpt4o": 2.50}, "coherence": {"claude": 2.50, "gpt4o": 2.70}, "estrangement": {"claude": 3.15, "gpt4o": 3.95}, "syntactic_estrangement": {"claude": 2.70, "gpt4o": 2.35}}},
+      {"condition": "Prompted: Consciousness", "metrics": {"imagery": {"claude": 2.90, "gpt4o": 3.55}, "indeterminacy": {"claude": 3.70, "gpt4o": 5.00}, "originality": {"claude": 2.15, "gpt4o": 3.80}, "register": {"claude": 2.55, "gpt4o": 3.80}, "coherence": {"claude": 3.50, "gpt4o": 3.90}, "estrangement": {"claude": 3.80, "gpt4o": 4.75}, "syntactic_estrangement": {"claude": 4.15, "gpt4o": 4.35}}},
+      {"condition": "Prompted: Experimental", "metrics": {"imagery": {"claude": 4.10, "gpt4o": 4.80}, "indeterminacy": {"claude": 3.20, "gpt4o": 5.00}, "originality": {"claude": 3.20, "gpt4o": 4.25}, "register": {"claude": 4.00, "gpt4o": 4.70}, "coherence": {"claude": 3.25, "gpt4o": 4.85}, "estrangement": {"claude": 3.50, "gpt4o": 4.35}, "syntactic_estrangement": {"claude": 3.75, "gpt4o": 3.75}}},
+      {"condition": "Prompted: Fragmented", "metrics": {"imagery": {"claude": 3.25, "gpt4o": 3.75}, "indeterminacy": {"claude": 2.90, "gpt4o": 4.65}, "originality": {"claude": 2.05, "gpt4o": 3.05}, "register": {"claude": 2.70, "gpt4o": 3.35}, "coherence": {"claude": 3.75, "gpt4o": 4.50}, "estrangement": {"claude": 2.25, "gpt4o": 3.25}, "syntactic_estrangement": {"claude": 3.45, "gpt4o": 3.65}}},
+      {"condition": "Baseline (No Steering)", "metrics": {"imagery": {"claude": 2.77, "gpt4o": 3.63}, "indeterminacy": {"claude": 1.28, "gpt4o": 2.32}, "originality": {"claude": 1.17, "gpt4o": 1.60}, "register": {"claude": 1.80, "gpt4o": 2.13}, "coherence": {"claude": 4.43, "gpt4o": 5.00}, "estrangement": {"claude": 1.15, "gpt4o": 1.68}, "syntactic_estrangement": {"claude": 1.00, "gpt4o": 1.00}}},
+      {"condition": "Positive α=4.0", "metrics": {"imagery": {"claude": 3.33, "gpt4o": 4.47}, "indeterminacy": {"claude": 1.82, "gpt4o": 3.20}, "originality": {"claude": 1.93, "gpt4o": 2.45}, "register": {"claude": 2.83, "gpt4o": 3.43}, "coherence": {"claude": 4.35, "gpt4o": 5.00}, "estrangement": {"claude": 1.27, "gpt4o": 2.87}, "syntactic_estrangement": {"claude": 1.00, "gpt4o": 1.00}}},
+      {"condition": "Positive α=6.0", "metrics": {"imagery": {"claude": 3.47, "gpt4o": 4.45}, "indeterminacy": {"claude": 2.25, "gpt4o": 4.05}, "originality": {"claude": 2.20, "gpt4o": 3.02}, "register": {"claude": 3.33, "gpt4o": 3.92}, "coherence": {"claude": 4.03, "gpt4o": 4.98}, "estrangement": {"claude": 1.63, "gpt4o": 3.45}, "syntactic_estrangement": {"claude": 1.00, "gpt4o": 1.15}}},
+      {"condition": "Positive α=7.5", "metrics": {"imagery": {"claude": 3.57, "gpt4o": 4.67}, "indeterminacy": {"claude": 2.65, "gpt4o": 4.35}, "originality": {"claude": 2.92, "gpt4o": 3.78}, "register": {"claude": 3.70, "gpt4o": 4.37}, "coherence": {"claude": 3.80, "gpt4o": 4.82}, "estrangement": {"claude": 2.47, "gpt4o": 3.78}, "syntactic_estrangement": {"claude": 1.43, "gpt4o": 1.77}}},
+      {"condition": "Positive α=8.0", "metrics": {"imagery": {"claude": 2.65, "gpt4o": 4.12}, "indeterminacy": {"claude": 3.68, "gpt4o": 4.78}, "originality": {"claude": 3.75, "gpt4o": 4.40}, "register": {"claude": 3.93, "gpt4o": 4.47}, "coherence": {"claude": 2.68, "gpt4o": 3.22}, "estrangement": {"claude": 3.52, "gpt4o": 4.27}, "syntactic_estrangement": {"claude": 2.82, "gpt4o": 2.98}}},
+      {"condition": "Negative α=4.0", "metrics": {"imagery": {"claude": 2.17, "gpt4o": 2.68}, "indeterminacy": {"claude": 1.13, "gpt4o": 1.90}, "originality": {"claude": 1.00, "gpt4o": 1.27}, "register": {"claude": 1.32, "gpt4o": 1.50}, "coherence": {"claude": 4.20, "gpt4o": 4.93}, "estrangement": {"claude": 1.07, "gpt4o": 1.47}, "syntactic_estrangement": {"claude": 1.00, "gpt4o": 1.00}}},
+      {"condition": "Negative α=6.0", "metrics": {"imagery": {"claude": 2.07, "gpt4o": 2.68}, "indeterminacy": {"claude": 1.08, "gpt4o": 1.72}, "originality": {"claude": 1.00, "gpt4o": 1.10}, "register": {"claude": 1.17, "gpt4o": 1.43}, "coherence": {"claude": 4.50, "gpt4o": 5.00}, "estrangement": {"claude": 1.05, "gpt4o": 1.45}, "syntactic_estrangement": {"claude": 1.00, "gpt4o": 1.00}}},
+      {"condition": "Negative α=7.5", "metrics": {"imagery": {"claude": 1.77, "gpt4o": 2.37}, "indeterminacy": {"claude": 1.08, "gpt4o": 1.52}, "originality": {"claude": 1.00, "gpt4o": 1.00}, "register": {"claude": 1.13, "gpt4o": 1.23}, "coherence": {"claude": 3.53, "gpt4o": 4.87}, "estrangement": {"claude": 1.17, "gpt4o": 1.25}, "syntactic_estrangement": {"claude": 1.00, "gpt4o": 1.00}}},
+      {"condition": "Negative α=8.0", "metrics": {"imagery": {"claude": 1.83, "gpt4o": 2.35}, "indeterminacy": {"claude": 1.13, "gpt4o": 1.12}, "originality": {"claude": 1.00, "gpt4o": 1.02}, "register": {"claude": 1.00, "gpt4o": 1.22}, "coherence": {"claude": 3.63, "gpt4o": 4.87}, "estrangement": {"claude": 1.08, "gpt4o": 1.18}, "syntactic_estrangement": {"claude": 1.12, "gpt4o": 1.00}}}
+    ]
+  }
+}
