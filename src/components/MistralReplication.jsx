@@ -187,7 +187,7 @@ function MistralReplication() {
           </p>
           <div className="plot-container">
             <img
-              src={`${import.meta.env.BASE_URL}mistral/pos_neg_l14.png`}
+              src={`${import.meta.env.BASE_URL}mistral/pos_neg_l14.png?v=2`}
               alt="Mistral positive vs negative steering at Layer 14"
               className="plot-image"
             />
