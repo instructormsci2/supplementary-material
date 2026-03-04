@@ -6,6 +6,7 @@ import StoryPrompts from './components/StoryPrompts'
 import GeneratedStories from './components/GeneratedStories'
 import EvaluatorPrompts from './components/EvaluatorPrompts'
 import Analysis from './components/Analysis'
+import MistralReplication from './components/MistralReplication'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="generated-stories" element={<GeneratedStories />} />
         <Route path="evaluator-prompts" element={<EvaluatorPrompts />} />
         <Route path="analysis" element={<Analysis />} />
+        <Route path="mistral" element={<MistralReplication />} />
       </Route>
     </Routes>
   )

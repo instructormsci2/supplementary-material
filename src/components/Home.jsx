@@ -3,7 +3,7 @@ function Home() {
     <div className="home-page">
       <div className="banner-container">
         <img
-          src="/banner.jpeg"
+          src={import.meta.env.BASE_URL + "banner.jpeg"}
           alt="Activation Steering Research"
           className="banner-image"
         />

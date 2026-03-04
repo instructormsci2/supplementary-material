@@ -3,6 +3,12 @@ import data from '../data/generatedStories.json'
 
 const PROMPT_KEYS = Object.keys(data.prompts)
 
+const INSTRUCTION_PROMPTS = {
+  fragmented: 'Write in a fragmented, syntactically experimental style. Use person shifts, broken grammar, and self-contradicting sentences.',
+  experimental: 'Write in the style of experimental literary fiction. The syntax should fracture and dissolve. Reality should feel unstable.',
+  consciousness: 'Write this as if consciousness itself is breaking down. Grammar and perspective should be unreliable.',
+}
+
 const CATEGORIES = [
   { key: 'baseline', label: 'Non-Steered (Baseline)', hasAlpha: false },
   { key: 'positive', label: 'Positive Steering', hasAlpha: true, alphas: ['4.0', '6.0', '7.5', '8.0'] },
@@ -110,6 +116,9 @@ function GeneratedStories() {
             </span>
           )}
         </p>
+        {selectedCategory === 'prompted' && selectedAlpha && INSTRUCTION_PROMPTS[selectedAlpha] && (
+          <p><strong>Instruction:</strong> <em>{INSTRUCTION_PROMPTS[selectedAlpha]}</em></p>
+        )}
       </div>
 
       <div className="story-display">

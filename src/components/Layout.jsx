@@ -7,6 +7,7 @@ const navItems = [
   { path: '/generated-stories', label: 'Generated Stories' },
   { path: '/evaluator-prompts', label: 'LLM Evaluator Prompts' },
   { path: '/analysis', label: 'Analysis' },
+  { path: '/mistral', label: 'Mistral 7B Replication' },
 ]
 
 function Layout() {
