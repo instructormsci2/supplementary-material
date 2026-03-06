@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import data from '../data/analysisData.json'
+import layerData from '../data/layerAnalysis.json'
+import LayerAnalysisTable from './LayerAnalysisTable'
 
 function Analysis() {
   const [activeTab, setActiveTab] = useState('steering')
@@ -55,6 +57,9 @@ function Analysis() {
           <div className="plot-container">
             <img src={`${import.meta.env.BASE_URL}pos_neg_l13.png`} alt="Positive vs negative steering comparison at Layer 13" className="plot-image" />
           </div>
+
+          <h2>Layer Analysis</h2>
+          <LayerAnalysisTable data={layerData.llama.first_order} />
         </section>
       )}
 
@@ -68,6 +73,9 @@ function Analysis() {
           <div className="plot-container">
             <img src={`${import.meta.env.BASE_URL}dual_all_metrics_grid.png`} alt="Dual-layer steering: all metrics vs Layer 14 alpha" className="plot-image" />
           </div>
+
+          <h2>Layer Analysis (Second-Order)</h2>
+          <LayerAnalysisTable data={layerData.llama.second_order} />
         </section>
       )}
 

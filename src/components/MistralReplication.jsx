@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import data from '../data/mistralStories.json'
+import layerData from '../data/layerAnalysis.json'
+import LayerAnalysisTable from './LayerAnalysisTable'
 
 const PROMPT_KEYS = Object.keys(data.prompts)
 
@@ -193,6 +195,9 @@ function MistralReplication() {
             />
           </div>
 
+          <h3>Layer Analysis (First-Order)</h3>
+          <LayerAnalysisTable data={layerData.mistral.first_order} />
+
           <h2>Dual-Layer Steering</h2>
           <p className="page-description">
             All metrics as a function of Layer 17 alpha, with Layer 14 composite vector fixed at α=3.0. Three Layer 17 vector types are compared: composite, Lynchian, and Solaris.
@@ -204,6 +209,9 @@ function MistralReplication() {
               className="plot-image"
             />
           </div>
+
+          <h3>Layer Analysis (Second-Order)</h3>
+          <LayerAnalysisTable data={layerData.mistral.second_order} />
         </section>
       )}
     </div>

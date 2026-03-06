@@ -1,0 +1,926 @@
+{
+  "llama": {
+    "first_order": {
+      "description": "Contrastive analysis across 32 layers of Llama 3.1 8B Instruct using 5 first-order style pairs (Contemplative, Lost Highway, Lynchian, Solaris, Stalker). Layer 13 was selected for steering based on peak consistency.",
+      "selected_layer": 13,
+      "layers": [
+        {
+          "layer": 0,
+          "consistency": 0.4471,
+          "cosine_distance": 0.1136,
+          "relative_l2": 0.4763,
+          "direction_norm": 0.1087
+        },
+        {
+          "layer": 1,
+          "consistency": 0.488,
+          "cosine_distance": 0.1643,
+          "relative_l2": 0.5727,
+          "direction_norm": 0.1947
+        },
+        {
+          "layer": 2,
+          "consistency": 0.5199,
+          "cosine_distance": 0.169,
+          "relative_l2": 0.5808,
+          "direction_norm": 0.3413
+        },
+        {
+          "layer": 3,
+          "consistency": 0.5721,
+          "cosine_distance": 0.2322,
+          "relative_l2": 0.6811,
+          "direction_norm": 0.6276
+        },
+        {
+          "layer": 4,
+          "consistency": 0.5913,
+          "cosine_distance": 0.3021,
+          "relative_l2": 0.7763,
+          "direction_norm": 0.9645
+        },
+        {
+          "layer": 5,
+          "consistency": 0.591,
+          "cosine_distance": 0.3077,
+          "relative_l2": 0.7841,
+          "direction_norm": 1.1841
+        },
+        {
+          "layer": 6,
+          "consistency": 0.599,
+          "cosine_distance": 0.3656,
+          "relative_l2": 0.8554,
+          "direction_norm": 1.466
+        },
+        {
+          "layer": 7,
+          "consistency": 0.6014,
+          "cosine_distance": 0.3985,
+          "relative_l2": 0.892,
+          "direction_norm": 1.7711
+        },
+        {
+          "layer": 8,
+          "consistency": 0.6172,
+          "cosine_distance": 0.4098,
+          "relative_l2": 0.9049,
+          "direction_norm": 2.0442
+        },
+        {
+          "layer": 9,
+          "consistency": 0.6337,
+          "cosine_distance": 0.3959,
+          "relative_l2": 0.8907,
+          "direction_norm": 2.3449
+        },
+        {
+          "layer": 10,
+          "consistency": 0.6285,
+          "cosine_distance": 0.399,
+          "relative_l2": 0.8938,
+          "direction_norm": 2.4534
+        },
+        {
+          "layer": 11,
+          "consistency": 0.6397,
+          "cosine_distance": 0.3783,
+          "relative_l2": 0.8716,
+          "direction_norm": 2.5524
+        },
+        {
+          "layer": 12,
+          "consistency": 0.6374,
+          "cosine_distance": 0.315,
+          "relative_l2": 0.7975,
+          "direction_norm": 2.8372
+        },
+        {
+          "layer": 13,
+          "consistency": 0.6541,
+          "cosine_distance": 0.3329,
+          "relative_l2": 0.8191,
+          "direction_norm": 3.1923
+        },
+        {
+          "layer": 14,
+          "consistency": 0.6393,
+          "cosine_distance": 0.3362,
+          "relative_l2": 0.8213,
+          "direction_norm": 3.2324
+        },
+        {
+          "layer": 15,
+          "consistency": 0.6334,
+          "cosine_distance": 0.3509,
+          "relative_l2": 0.8389,
+          "direction_norm": 3.6925
+        },
+        {
+          "layer": 16,
+          "consistency": 0.6313,
+          "cosine_distance": 0.3057,
+          "relative_l2": 0.7848,
+          "direction_norm": 3.9668
+        },
+        {
+          "layer": 17,
+          "consistency": 0.6271,
+          "cosine_distance": 0.327,
+          "relative_l2": 0.8091,
+          "direction_norm": 4.4656
+        },
+        {
+          "layer": 18,
+          "consistency": 0.6346,
+          "cosine_distance": 0.312,
+          "relative_l2": 0.789,
+          "direction_norm": 4.9407
+        },
+        {
+          "layer": 19,
+          "consistency": 0.6335,
+          "cosine_distance": 0.2889,
+          "relative_l2": 0.759,
+          "direction_norm": 5.2466
+        },
+        {
+          "layer": 20,
+          "consistency": 0.6296,
+          "cosine_distance": 0.3048,
+          "relative_l2": 0.7794,
+          "direction_norm": 5.5924
+        },
+        {
+          "layer": 21,
+          "consistency": 0.6407,
+          "cosine_distance": 0.3022,
+          "relative_l2": 0.7749,
+          "direction_norm": 6.5859
+        },
+        {
+          "layer": 22,
+          "consistency": 0.6317,
+          "cosine_distance": 0.2823,
+          "relative_l2": 0.749,
+          "direction_norm": 7.0304
+        },
+        {
+          "layer": 23,
+          "consistency": 0.6303,
+          "cosine_distance": 0.2613,
+          "relative_l2": 0.7208,
+          "direction_norm": 7.5448
+        },
+        {
+          "layer": 24,
+          "consistency": 0.626,
+          "cosine_distance": 0.2397,
+          "relative_l2": 0.6907,
+          "direction_norm": 7.8983
+        },
+        {
+          "layer": 25,
+          "consistency": 0.6326,
+          "cosine_distance": 0.2379,
+          "relative_l2": 0.6883,
+          "direction_norm": 8.7128
+        },
+        {
+          "layer": 26,
+          "consistency": 0.6311,
+          "cosine_distance": 0.2098,
+          "relative_l2": 0.6468,
+          "direction_norm": 9.289
+        },
+        {
+          "layer": 27,
+          "consistency": 0.6304,
+          "cosine_distance": 0.1967,
+          "relative_l2": 0.6263,
+          "direction_norm": 9.8524
+        },
+        {
+          "layer": 28,
+          "consistency": 0.6238,
+          "cosine_distance": 0.1877,
+          "relative_l2": 0.6125,
+          "direction_norm": 10.6038
+        },
+        {
+          "layer": 29,
+          "consistency": 0.6207,
+          "cosine_distance": 0.1982,
+          "relative_l2": 0.6281,
+          "direction_norm": 11.5599
+        },
+        {
+          "layer": 30,
+          "consistency": 0.6242,
+          "cosine_distance": 0.215,
+          "relative_l2": 0.6541,
+          "direction_norm": 13.1868
+        },
+        {
+          "layer": 31,
+          "consistency": 0.6385,
+          "cosine_distance": 0.3211,
+          "relative_l2": 0.7983,
+          "direction_norm": 44.5792
+        }
+      ]
+    },
+    "second_order": {
+      "description": "Contrastive analysis across 32 layers using 2 second-order style pairs (Lynchian, Solaris). Layer 14 was selected for the second steering vector, operating on outputs already steered at Layer 13.",
+      "selected_layer": 14,
+      "layers": [
+        {
+          "layer": 0,
+          "consistency": 0.3775,
+          "cosine_distance": 0.0887,
+          "relative_l2": 0.4124,
+          "direction_norm": 0.079
+        },
+        {
+          "layer": 1,
+          "consistency": 0.3818,
+          "cosine_distance": 0.1184,
+          "relative_l2": 0.4763,
+          "direction_norm": 0.125
+        },
+        {
+          "layer": 2,
+          "consistency": 0.376,
+          "cosine_distance": 0.1135,
+          "relative_l2": 0.4662,
+          "direction_norm": 0.1944
+        },
+        {
+          "layer": 3,
+          "consistency": 0.3832,
+          "cosine_distance": 0.1478,
+          "relative_l2": 0.5323,
+          "direction_norm": 0.321
+        },
+        {
+          "layer": 4,
+          "consistency": 0.3939,
+          "cosine_distance": 0.1879,
+          "relative_l2": 0.6004,
+          "direction_norm": 0.4872
+        },
+        {
+          "layer": 5,
+          "consistency": 0.4022,
+          "cosine_distance": 0.1886,
+          "relative_l2": 0.6016,
+          "direction_norm": 0.6076
+        },
+        {
+          "layer": 6,
+          "consistency": 0.4022,
+          "cosine_distance": 0.2252,
+          "relative_l2": 0.657,
+          "direction_norm": 0.7453
+        },
+        {
+          "layer": 7,
+          "consistency": 0.4041,
+          "cosine_distance": 0.2462,
+          "relative_l2": 0.6875,
+          "direction_norm": 0.9045
+        },
+        {
+          "layer": 8,
+          "consistency": 0.4105,
+          "cosine_distance": 0.2504,
+          "relative_l2": 0.6934,
+          "direction_norm": 1.0141
+        },
+        {
+          "layer": 9,
+          "consistency": 0.4255,
+          "cosine_distance": 0.2379,
+          "relative_l2": 0.6763,
+          "direction_norm": 1.1644
+        },
+        {
+          "layer": 10,
+          "consistency": 0.4312,
+          "cosine_distance": 0.2456,
+          "relative_l2": 0.6868,
+          "direction_norm": 1.2676
+        },
+        {
+          "layer": 11,
+          "consistency": 0.4254,
+          "cosine_distance": 0.2394,
+          "relative_l2": 0.6777,
+          "direction_norm": 1.278
+        },
+        {
+          "layer": 12,
+          "consistency": 0.44,
+          "cosine_distance": 0.2067,
+          "relative_l2": 0.6306,
+          "direction_norm": 1.4983
+        },
+        {
+          "layer": 13,
+          "consistency": 0.4518,
+          "cosine_distance": 0.2188,
+          "relative_l2": 0.6494,
+          "direction_norm": 1.6795
+        },
+        {
+          "layer": 14,
+          "consistency": 0.4569,
+          "cosine_distance": 0.2303,
+          "relative_l2": 0.6667,
+          "direction_norm": 1.8053
+        },
+        {
+          "layer": 15,
+          "consistency": 0.4418,
+          "cosine_distance": 0.2434,
+          "relative_l2": 0.6836,
+          "direction_norm": 2.0269
+        },
+        {
+          "layer": 16,
+          "consistency": 0.4492,
+          "cosine_distance": 0.2198,
+          "relative_l2": 0.6506,
+          "direction_norm": 2.241
+        },
+        {
+          "layer": 17,
+          "consistency": 0.4421,
+          "cosine_distance": 0.2306,
+          "relative_l2": 0.6652,
+          "direction_norm": 2.4916
+        },
+        {
+          "layer": 18,
+          "consistency": 0.4325,
+          "cosine_distance": 0.211,
+          "relative_l2": 0.6359,
+          "direction_norm": 2.6275
+        },
+        {
+          "layer": 19,
+          "consistency": 0.4324,
+          "cosine_distance": 0.1965,
+          "relative_l2": 0.6144,
+          "direction_norm": 2.8098
+        },
+        {
+          "layer": 20,
+          "consistency": 0.4293,
+          "cosine_distance": 0.2096,
+          "relative_l2": 0.6345,
+          "direction_norm": 3.0107
+        },
+        {
+          "layer": 21,
+          "consistency": 0.432,
+          "cosine_distance": 0.1998,
+          "relative_l2": 0.6193,
+          "direction_norm": 3.4758
+        },
+        {
+          "layer": 22,
+          "consistency": 0.4281,
+          "cosine_distance": 0.1896,
+          "relative_l2": 0.6033,
+          "direction_norm": 3.7866
+        },
+        {
+          "layer": 23,
+          "consistency": 0.4262,
+          "cosine_distance": 0.1751,
+          "relative_l2": 0.5799,
+          "direction_norm": 4.0822
+        },
+        {
+          "layer": 24,
+          "consistency": 0.4243,
+          "cosine_distance": 0.1603,
+          "relative_l2": 0.5549,
+          "direction_norm": 4.3063
+        },
+        {
+          "layer": 25,
+          "consistency": 0.4277,
+          "cosine_distance": 0.1593,
+          "relative_l2": 0.5532,
+          "direction_norm": 4.7408
+        },
+        {
+          "layer": 26,
+          "consistency": 0.4258,
+          "cosine_distance": 0.1395,
+          "relative_l2": 0.5179,
+          "direction_norm": 5.0445
+        },
+        {
+          "layer": 27,
+          "consistency": 0.4261,
+          "cosine_distance": 0.1313,
+          "relative_l2": 0.5025,
+          "direction_norm": 5.3689
+        },
+        {
+          "layer": 28,
+          "consistency": 0.4225,
+          "cosine_distance": 0.1267,
+          "relative_l2": 0.4934,
+          "direction_norm": 5.8293
+        },
+        {
+          "layer": 29,
+          "consistency": 0.4218,
+          "cosine_distance": 0.1373,
+          "relative_l2": 0.5129,
+          "direction_norm": 6.3874
+        },
+        {
+          "layer": 30,
+          "consistency": 0.4192,
+          "cosine_distance": 0.1467,
+          "relative_l2": 0.5297,
+          "direction_norm": 7.1471
+        },
+        {
+          "layer": 31,
+          "consistency": 0.4248,
+          "cosine_distance": 0.206,
+          "relative_l2": 0.6255,
+          "direction_norm": 22.7824
+        }
+      ]
+    }
+  },
+  "mistral": {
+    "first_order": {
+      "description": "Contrastive analysis across 32 layers of Mistral-7B-Instruct-v0.3 using 5 first-order style pairs. Layer 14 was selected for steering based on the combination of consistency and cosine distance in the mid-network range.",
+      "selected_layer": 14,
+      "layers": [
+        {
+          "layer": 0,
+          "consistency": 0.464,
+          "cosine_distance": 0.0989,
+          "relative_l2": 0.4449,
+          "direction_norm": 0.0306
+        },
+        {
+          "layer": 1,
+          "consistency": 0.4945,
+          "cosine_distance": 0.1999,
+          "relative_l2": 0.6319,
+          "direction_norm": 0.0593
+        },
+        {
+          "layer": 2,
+          "consistency": 0.5306,
+          "cosine_distance": 0.2008,
+          "relative_l2": 0.633,
+          "direction_norm": 0.1037
+        },
+        {
+          "layer": 3,
+          "consistency": 0.537,
+          "cosine_distance": 0.3046,
+          "relative_l2": 0.7794,
+          "direction_norm": 0.1605
+        },
+        {
+          "layer": 4,
+          "consistency": 0.5776,
+          "cosine_distance": 0.3501,
+          "relative_l2": 0.8355,
+          "direction_norm": 0.2569
+        },
+        {
+          "layer": 5,
+          "consistency": 0.568,
+          "cosine_distance": 0.4177,
+          "relative_l2": 0.9136,
+          "direction_norm": 0.3654
+        },
+        {
+          "layer": 6,
+          "consistency": 0.5709,
+          "cosine_distance": 0.4559,
+          "relative_l2": 0.9539,
+          "direction_norm": 0.4587
+        },
+        {
+          "layer": 7,
+          "consistency": 0.5806,
+          "cosine_distance": 0.4665,
+          "relative_l2": 0.9649,
+          "direction_norm": 0.5951
+        },
+        {
+          "layer": 8,
+          "consistency": 0.5923,
+          "cosine_distance": 0.5027,
+          "relative_l2": 1.0013,
+          "direction_norm": 0.7133
+        },
+        {
+          "layer": 9,
+          "consistency": 0.598,
+          "cosine_distance": 0.4843,
+          "relative_l2": 0.983,
+          "direction_norm": 0.8175
+        },
+        {
+          "layer": 10,
+          "consistency": 0.6146,
+          "cosine_distance": 0.4833,
+          "relative_l2": 0.9828,
+          "direction_norm": 0.9575
+        },
+        {
+          "layer": 11,
+          "consistency": 0.6282,
+          "cosine_distance": 0.4806,
+          "relative_l2": 0.9798,
+          "direction_norm": 1.1152
+        },
+        {
+          "layer": 12,
+          "consistency": 0.6316,
+          "cosine_distance": 0.4858,
+          "relative_l2": 0.9858,
+          "direction_norm": 1.2424
+        },
+        {
+          "layer": 13,
+          "consistency": 0.6304,
+          "cosine_distance": 0.5002,
+          "relative_l2": 0.9996,
+          "direction_norm": 1.4223
+        },
+        {
+          "layer": 14,
+          "consistency": 0.6453,
+          "cosine_distance": 0.5009,
+          "relative_l2": 1.0008,
+          "direction_norm": 1.7417
+        },
+        {
+          "layer": 15,
+          "consistency": 0.6397,
+          "cosine_distance": 0.5306,
+          "relative_l2": 1.0301,
+          "direction_norm": 1.9888
+        },
+        {
+          "layer": 16,
+          "consistency": 0.6342,
+          "cosine_distance": 0.5292,
+          "relative_l2": 1.0283,
+          "direction_norm": 2.3045
+        },
+        {
+          "layer": 17,
+          "consistency": 0.6206,
+          "cosine_distance": 0.5349,
+          "relative_l2": 1.0355,
+          "direction_norm": 2.544
+        },
+        {
+          "layer": 18,
+          "consistency": 0.6388,
+          "cosine_distance": 0.5371,
+          "relative_l2": 1.0371,
+          "direction_norm": 3.1324
+        },
+        {
+          "layer": 19,
+          "consistency": 0.6404,
+          "cosine_distance": 0.5411,
+          "relative_l2": 1.0409,
+          "direction_norm": 3.7651
+        },
+        {
+          "layer": 20,
+          "consistency": 0.6338,
+          "cosine_distance": 0.5197,
+          "relative_l2": 1.0199,
+          "direction_norm": 4.2161
+        },
+        {
+          "layer": 21,
+          "consistency": 0.6253,
+          "cosine_distance": 0.5022,
+          "relative_l2": 1.0031,
+          "direction_norm": 4.5035
+        },
+        {
+          "layer": 22,
+          "consistency": 0.6342,
+          "cosine_distance": 0.4881,
+          "relative_l2": 0.989,
+          "direction_norm": 4.9624
+        },
+        {
+          "layer": 23,
+          "consistency": 0.6469,
+          "cosine_distance": 0.4827,
+          "relative_l2": 0.9841,
+          "direction_norm": 5.5223
+        },
+        {
+          "layer": 24,
+          "consistency": 0.6394,
+          "cosine_distance": 0.461,
+          "relative_l2": 0.9617,
+          "direction_norm": 5.7843
+        },
+        {
+          "layer": 25,
+          "consistency": 0.634,
+          "cosine_distance": 0.434,
+          "relative_l2": 0.9334,
+          "direction_norm": 6.0745
+        },
+        {
+          "layer": 26,
+          "consistency": 0.634,
+          "cosine_distance": 0.4157,
+          "relative_l2": 0.914,
+          "direction_norm": 6.3942
+        },
+        {
+          "layer": 27,
+          "consistency": 0.6527,
+          "cosine_distance": 0.3939,
+          "relative_l2": 0.8903,
+          "direction_norm": 7.1465
+        },
+        {
+          "layer": 28,
+          "consistency": 0.6534,
+          "cosine_distance": 0.3769,
+          "relative_l2": 0.87,
+          "direction_norm": 7.6769
+        },
+        {
+          "layer": 29,
+          "consistency": 0.663,
+          "cosine_distance": 0.3318,
+          "relative_l2": 0.8159,
+          "direction_norm": 8.7206
+        },
+        {
+          "layer": 30,
+          "consistency": 0.6637,
+          "cosine_distance": 0.3099,
+          "relative_l2": 0.7887,
+          "direction_norm": 9.4732
+        },
+        {
+          "layer": 31,
+          "consistency": 0.6739,
+          "cosine_distance": 0.4371,
+          "relative_l2": 0.9345,
+          "direction_norm": 134.2793
+        }
+      ]
+    },
+    "second_order": {
+      "description": "Contrastive analysis across 32 layers using 2 second-order style pairs (Lynchian, Solaris). Layer 17 was selected for the second steering vector.",
+      "selected_layer": 17,
+      "layers": [
+        {
+          "layer": 0,
+          "consistency": 0.3846,
+          "cosine_distance": 0.0775,
+          "relative_l2": 0.3852,
+          "direction_norm": 0.0215
+        },
+        {
+          "layer": 1,
+          "consistency": 0.3779,
+          "cosine_distance": 0.1506,
+          "relative_l2": 0.5361,
+          "direction_norm": 0.0376
+        },
+        {
+          "layer": 2,
+          "consistency": 0.3772,
+          "cosine_distance": 0.1371,
+          "relative_l2": 0.5117,
+          "direction_norm": 0.0583
+        },
+        {
+          "layer": 3,
+          "consistency": 0.3715,
+          "cosine_distance": 0.2164,
+          "relative_l2": 0.642,
+          "direction_norm": 0.0893
+        },
+        {
+          "layer": 4,
+          "consistency": 0.3734,
+          "cosine_distance": 0.2377,
+          "relative_l2": 0.6738,
+          "direction_norm": 0.1288
+        },
+        {
+          "layer": 5,
+          "consistency": 0.3701,
+          "cosine_distance": 0.2818,
+          "relative_l2": 0.733,
+          "direction_norm": 0.1832
+        },
+        {
+          "layer": 6,
+          "consistency": 0.3764,
+          "cosine_distance": 0.3147,
+          "relative_l2": 0.7739,
+          "direction_norm": 0.2361
+        },
+        {
+          "layer": 7,
+          "consistency": 0.3769,
+          "cosine_distance": 0.3042,
+          "relative_l2": 0.7611,
+          "direction_norm": 0.2949
+        },
+        {
+          "layer": 8,
+          "consistency": 0.3885,
+          "cosine_distance": 0.3238,
+          "relative_l2": 0.7855,
+          "direction_norm": 0.3553
+        },
+        {
+          "layer": 9,
+          "consistency": 0.3906,
+          "cosine_distance": 0.3108,
+          "relative_l2": 0.77,
+          "direction_norm": 0.4033
+        },
+        {
+          "layer": 10,
+          "consistency": 0.3995,
+          "cosine_distance": 0.3055,
+          "relative_l2": 0.764,
+          "direction_norm": 0.4639
+        },
+        {
+          "layer": 11,
+          "consistency": 0.4046,
+          "cosine_distance": 0.3009,
+          "relative_l2": 0.7579,
+          "direction_norm": 0.53
+        },
+        {
+          "layer": 12,
+          "consistency": 0.4089,
+          "cosine_distance": 0.3052,
+          "relative_l2": 0.763,
+          "direction_norm": 0.5897
+        },
+        {
+          "layer": 13,
+          "consistency": 0.4108,
+          "cosine_distance": 0.3214,
+          "relative_l2": 0.7828,
+          "direction_norm": 0.6894
+        },
+        {
+          "layer": 14,
+          "consistency": 0.4209,
+          "cosine_distance": 0.3157,
+          "relative_l2": 0.7771,
+          "direction_norm": 0.8352
+        },
+        {
+          "layer": 15,
+          "consistency": 0.417,
+          "cosine_distance": 0.3357,
+          "relative_l2": 0.8016,
+          "direction_norm": 0.9523
+        },
+        {
+          "layer": 16,
+          "consistency": 0.4176,
+          "cosine_distance": 0.3297,
+          "relative_l2": 0.795,
+          "direction_norm": 1.1143
+        },
+        {
+          "layer": 17,
+          "consistency": 0.4184,
+          "cosine_distance": 0.3413,
+          "relative_l2": 0.8089,
+          "direction_norm": 1.2611
+        },
+        {
+          "layer": 18,
+          "consistency": 0.4204,
+          "cosine_distance": 0.3206,
+          "relative_l2": 0.7845,
+          "direction_norm": 1.4856
+        },
+        {
+          "layer": 19,
+          "consistency": 0.4179,
+          "cosine_distance": 0.3161,
+          "relative_l2": 0.7784,
+          "direction_norm": 1.7579
+        },
+        {
+          "layer": 20,
+          "consistency": 0.416,
+          "cosine_distance": 0.2984,
+          "relative_l2": 0.7565,
+          "direction_norm": 1.9874
+        },
+        {
+          "layer": 21,
+          "consistency": 0.4104,
+          "cosine_distance": 0.2915,
+          "relative_l2": 0.7473,
+          "direction_norm": 2.129
+        },
+        {
+          "layer": 22,
+          "consistency": 0.4099,
+          "cosine_distance": 0.2808,
+          "relative_l2": 0.7331,
+          "direction_norm": 2.2987
+        },
+        {
+          "layer": 23,
+          "consistency": 0.4111,
+          "cosine_distance": 0.2716,
+          "relative_l2": 0.7213,
+          "direction_norm": 2.4871
+        },
+        {
+          "layer": 24,
+          "consistency": 0.4066,
+          "cosine_distance": 0.2616,
+          "relative_l2": 0.7079,
+          "direction_norm": 2.6329
+        },
+        {
+          "layer": 25,
+          "consistency": 0.4061,
+          "cosine_distance": 0.2481,
+          "relative_l2": 0.689,
+          "direction_norm": 2.8114
+        },
+        {
+          "layer": 26,
+          "consistency": 0.4047,
+          "cosine_distance": 0.2379,
+          "relative_l2": 0.6747,
+          "direction_norm": 2.9615
+        },
+        {
+          "layer": 27,
+          "consistency": 0.4063,
+          "cosine_distance": 0.2207,
+          "relative_l2": 0.65,
+          "direction_norm": 3.178
+        },
+        {
+          "layer": 28,
+          "consistency": 0.4054,
+          "cosine_distance": 0.2131,
+          "relative_l2": 0.6388,
+          "direction_norm": 3.4196
+        },
+        {
+          "layer": 29,
+          "consistency": 0.4044,
+          "cosine_distance": 0.1862,
+          "relative_l2": 0.5971,
+          "direction_norm": 3.7987
+        },
+        {
+          "layer": 30,
+          "consistency": 0.4054,
+          "cosine_distance": 0.1778,
+          "relative_l2": 0.5833,
+          "direction_norm": 4.1517
+        },
+        {
+          "layer": 31,
+          "consistency": 0.406,
+          "cosine_distance": 0.2195,
+          "relative_l2": 0.647,
+          "direction_norm": 56.6782
+        }
+      ]
+    }
+  }
+}
